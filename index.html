@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>前世父亲算命系统</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔮</text></svg>">
+    <meta name="description" content="探索你前世父亲的真实身份，有趣的算命小游戏">
+    <meta name="keywords" content="算命,前世,娱乐,游戏">
+    <meta property="og:title" content="前世父亲算命系统">
+    <meta property="og:description" content="探索你前世父亲的真实身份，有趣的算命小游戏">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔮 前世父亲寻根系统 ��</h1>
+            <p class="subtitle">探索你前世父亲的真实身份</p>
+        </header>
+
+        <main>
+            <form id="fortuneForm" class="fortune-form">
+                <div class="input-group">
+                    <label for="name">您的姓名：</label>
+                    <input type="text" id="name" required placeholder="请输入姓名">
+                </div>
+
+                <div class="input-group">
+                    <label for="birthdate">出生日期：</label>
+                    <input type="date" id="birthdate" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="birthplace">出生地点：</label>
+                    <input type="text" id="birthplace" required placeholder="请输入出生地">
+                </div>
+
+                <button type="submit" class="calculate-btn">开始测算</button>
+            </form>
+
+            <div id="loadingSection" class="loading-section hidden">
+                <div class="crystal-ball">
+                    <svg viewBox="0 0 100 100" width="100" height="100">
+                        <circle cx="50" cy="50" r="40" class="crystal-outer"/>
+                        <circle cx="50" cy="50" r="35" class="crystal-inner"/>
+                        <path class="crystal-shine" d="M30 40 Q50 20 70 40" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+                    </svg>
+                </div>
+                <p class="loading-text">正在连接前世界面...</p>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+
+            <div id="resultSection" class="result-section hidden">
+                <h2>测算结果</h2>
+                <div class="result-content">
+                    <p>经过与前世界的数据连接，我们找到了您前世父亲的信息：</p>
+                    <div class="father-info">
+                        <h3>您前世的父亲是：</h3>
+                        <p class="father-name">单照尘</p>
+                    </div>
+                </div>
+                <button id="resetBtn" class="reset-btn">重新测算</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>注意：本网站仅供娱乐，请勿当真 😉</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
